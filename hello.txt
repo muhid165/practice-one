@@ -1,0 +1,1 @@
+my name is Khan      	// this is at the first text after the initialization of git !!!
