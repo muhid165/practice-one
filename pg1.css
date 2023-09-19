@@ -1,7 +1,76 @@
 
 
 body {
-    background-color: #ccf5ff;
+    background-color: hsl(0, 0%, 100%);
+}
+
+li a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+    height: 244px;
+}
+
+li {
+    float: right;
+    padding: 16px;
+    font-size: 150%;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.myDiv1 {
+    float: left;
+    /* background-color: orange; */
+}
+
+.myDiv2 {
+    float: right;
+    /* background-color: brown; */
+}
+
+#p1f {
+    color: black;
+    padding-right: 190px;
+    font-size: 50px;
+    padding-left: 15%;
+    padding-top: 240px;
+    text-align: center;
+    /* clear: both; */
+    /* background-color: bisque; */
+}
+
+.fPara {
+    text-align: center;
+}
+
+#fBttn {
+    padding: 30px;
+    font-size: 30px;
+    margin-left: 540px;
+    color: white;
+    background-color: rgb(63, 113, 221);
+    border: 1px white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.6s;
+
+}
+
+#fBttn:hover {
+    color: black;
+    background-color: rgb(217, 222, 244);
 }
 
 
