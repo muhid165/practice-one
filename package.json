@@ -1,0 +1,11 @@
+{
+  "name": "resume-builder-2",
+  "version": "1.0.0",
+  "description": "sem v project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muhid",
+  "license": "ISC"
+}
