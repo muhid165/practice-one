@@ -75,3 +75,50 @@ a:hover {
 
 
 
+/* page 2 css starts from here  */
+
+#pgg2 {
+    box-sizing: border-box;
+}
+
+
+.pg2h3 {
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 0px;
+    padding-left: 10px;
+    box-shadow: 20px 20px 90px rgb(206, 204, 204);
+}
+
+ .column {
+    /* float: left; */
+    width: 46%;
+    height: 300px;
+    border: 1px white;
+    border-radius: 9px;
+    
+ }
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  #nxtbtn {
+    float: right;
+    border: 1px white;
+    border-radius: 11px;
+    font-size: 15px;
+    padding: 10px;
+    transition-duration: 0.4s;
+  }
+
+  #nxtbtn:hover {
+    color: white;
+    background-color: tomato;
+  }
+  
+  .inrClmn {
+    background-color: aqua;
+  }
