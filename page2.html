@@ -9,28 +9,33 @@
   <body id="pgg2">
     <h3 class="pg2h3">BuildYourResume.com</h3>
     <div class="row">
-      <div class="column" style="float: left">
+      <div class="column " style="float: left">
         <div class="next-btn-wrapper"><button id="nxtbtn">Next 👉</button></div>
+        <!-- PERSONAL DETAILS STARTS FROM HERE ONWARDS  -->
         <div class="inrClmn">
           <h3 style="text-align: left; font-family: cursive">
             Personal Details
           </h3>
           <form action="" class="form-container">
-            <div class="input-wrapper">
-              <label for="frstnm">First Name</label><br />
-              <input type="text" class="input" />
+            <div class="input-container">
+              <div class="input-wrapper">
+                <label for="frstnm">First Name</label><br />
+                <input type="text" class="input" id="firstname_input" />
+              </div>
+              <div class="input-wrapper">
+                <label for="lsttnm">Last Name</label><br />
+                <input type="text" class="input" id="lastname_input" />
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label for="lsttnm">Last Name</label><br />
-              <input type="text" class="input" />
-            </div>
-            <div class="input-wrapper">
-              <label for="jbttl">Job Title</label><br />
-              <input type="text" class="input" />
-            </div>
-            <div class="input-wrapper">
-              <label for="phn">Phone</label><br />
-              <input type="number" class="input" />
+            <div class="input-container">
+              <div class="input-wrapper">
+                <label for="jbttl">Job Title</label><br />
+                <input type="text" class="input" />
+              </div>
+              <div class="input-wrapper">
+                <label for="phn">Phone</label><br />
+                <input type="number" class="input" />
+              </div>
             </div>
             <div class="input-wrapper">
               <label for="eml">Email Address</label><br />
@@ -40,31 +45,370 @@
               <label for="addr">Address</label><br />
               <input type="text" class="input input-addrss" />
             </div>
-            <div class="input-wrapper">
-              <label for="cty">city</label><br />
-              <input type="text" class="input" />
+            <div class="input-container">
+              <div class="input-wrapper">
+                <label for="cty">city</label><br />
+                <input type="text" class="input" />
+              </div>
+              <div class="input-wrapper">
+                <label for="pstlcd">Postal Code</label><br />
+                <input type="number" class="input" />
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label for="pstlcd">Postal Code</label><br />
-              <input type="number" class="input" />
+            <div class="input-container">
+              <div class="input-wrapper">
+                <label for="ste">State</label><br />
+                <input type="text" class="input" />
+              </div>
+              <div class="input-wrapper">
+                <label for="cntry">Country</label><br />
+                <input type="text" class="input" />
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label for="ste">State</label><br />
-              <input type="text" class="input" />
-            </div>
-            <div class="input-wrapper">
-              <label for="cntry">Country</label><br />
-              <input type="text" class="input" />
+            <div style="margin-left: 20px" class="add-social-link">
+              <span class="social-link">Add Social Links</span>
             </div>
           </form>
         </div>
+        <!-- EDUCATION PART STARTS FROM HERE ONWARDS -->
+        <div class="inrClmn">
+            <h3 style="text-align: left; font-family: cursive">
+                Tell us about your education
+            </h3>
+            <h5 style="text-align: left; font-family: cursive; padding: 2px;">Enter your education experience so far, even if you are a current student or did not graduate.</h5>
+            <form action="" class="form-container2 ">
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="frstnm">School Name</label><br />
+                  <input type="text" class="input" id="firstname_input" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="lsttnm">School Location</label><br />
+                  <input type="text" class="input" id="lastname_input" />
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="jbttl">Degree</label><br />
+                  <input type="text"  class="input" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="eml">Field of Study</label><br />
+                <input type="text" class="input" placeholder="e.g.Financial Accounting"/>
+              </div>
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="cty">Graduation Date <span style="font-size: smaller;">(or ExpectedGraduation Date)</span></label><br />
+                  <input type="month" class="input" />
+                </div>
+              </div>
+              <div style="margin-left: 20px" class="add-additional-coursework">
+                <span class="additional-coursework">Add any additional coursework you're proud to showcase</span>
+              </div>
+            </form>
+          </div>
+
+          <!-- skills part starts from here ^^) -->
+
+          <div class="inrClmn">
+            <h3 style="text-align: left; font-family: cursive">
+              List your top skills. The more relevant they are to the job you are applying for, the better.
+            </h3>
+            <form action="" class="form-container3">
+              <div class="input-container3">
+                <div class="input-wrapper">
+                  <label for="frstnm">Skill</label><br />
+                  <input type="text" class="input" id="" placeholder="e.g.Project Management,Online Marketing, Backend Developer" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="lsttnm">Level</label><br />
+                  <select name="skills" id="skills" style="width: 200px; height: 27px; border: 1px black solid; border-radius: 5px;">
+                    <option value="novice">⚫⚪⚪⚪⚪-Novice</option>
+                    <option value="beginner">⚫⚫⚪⚪⚪-Beginner</option>
+                    <option value="skillfull">⚫⚫⚫⚪⚪-Skillfull</option>
+                    <option value="exp">⚫⚫⚫⚫⚪-Exprienced</option>
+                    <option value="expr">⚫⚫⚫⚫⚫-Expert</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-left: 20px" class="add-addMore-skills">
+                <span class="addMore-skills">Add more Skills </span>
+              </div>
+              
+            </form>
+          </div>
+
+          <!-- JOB INFORMATION STARTS FROM HERE  -->
+          <div class="inrClmn">
+            <h3 style="text-align: left; font-family: cursive">
+              Tell us about your most recent job
+            </h3>
+            <form action="" class="form-container">
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="frstnm">Job Title</label><br />
+                  <input type="text" class="input" id="firstname_input" placeholder="e.g.Retail Sales Associate" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="lsttnm">Employer</label><br />
+                  <input type="text" class="input" id="lastname_input" placeholder="e.g.H&M"/>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="jbttl">City</label><br />
+                  <input type="text" class="input" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="phn">Country</label><br />
+                  <input type="text" class="input" />
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="cty">Start Date</label><br />
+                  <input type="date" class="input" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="pstlcd"> End Date</label><br />
+                  <input type="date" class="input" />
+                </div>
+              </div>
+              <div>
+                <h4 style="text-align: left; font-family: cursive">Nice! Now let's add the job description</h4>
+                <textarea name="txt-area" id="txt-area" cols="70" rows="15" class="input-wrapper" placeholder="Your Jobs Discription "></textarea>
+              </div>
+              
+              
+            </form>
+          </div>
+
+          <!-- INTEREST PART STARTS FROM HERE ^^) -->
+          <div class="inrClmn" >
+            <h3 style="text-align: left; font-family: cursive">
+              Can You Name some of your Interests Here
+            </h3>
+            <form action="" class="form-container">
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="frstnm">Interest</label><br />
+                  <input type="text" class="input" id="firstname_input" placeholder="e.g.Football, Cooking, ect" />
+                </div>
+                
+              </div>
+            </form>
+          </div>
+
+          <!-- PROFESSIONAL SUMMARY STARTS FROM HERE  -->
+          <div class="inrClmn" >
+            <h3 style="text-align: left; font-family: cursive">
+              PROFESSIONAL SUMMARY
+            </h3>
+            <h6>Write a short summary telling more about yourself, 
+              your strengths and experience. </h6>
+            <form action="" class="form-container">
+              <div class="input-container">
+                <div class="input-wrapper">
+                  <label for="frstnm">Summary</label><br />
+                  <textarea name="" id="" cols="60" rows="10" placeholder="Write a short summary telling more about yourself, your strengths, your experience,skills and achievements."></textarea>
+                  <!-- <input type="text" class="input" id="firstname_input" placeholder="e.g.Football, Cooking, ect" /> -->
+                </div>
+                
+              </div>
+            </form>
+          </div>
+
       </div>
+      
+
+      <!-- COLUMN 2 STARTS FROM HERE ONWARDS  -->
+
       <div
-        class="column"
+        class="column column2"
         style="background-color: rgb(187, 195, 202); float: right"
       >
         <h3 style="text-align: center">Column 2</h3>
+        <label>Firstname:</label>
+        <span id="firstname_output"></span><br />
+        <label>Lastname:</label>
+        <span id="lastname_output"></span>
+
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="container">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">John</span> 
+      <span class="last-name">Doe</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">john.doe@gmail.com</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">111-222-3333</span>
+    </div>
+    
+    <div class="about">
+      <span class="position">Front-End Developer </span>
+      <span class="desc">
+        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+      </span>
+    </div>
+  </div>
+   <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">KlowdBox</div>
+            <div class="addr">San Fr, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+                <div class="section__list-item">
+          <div class="left">
+            <div class="name">Akount</div>
+            <div class="addr">San Monica, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+
       </div>
     </div>
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Sample Institute of technology</div>
+            <div class="addr">San Fr, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Akount</div>
+            <div class="addr">San Monica, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+
+      </div>
+      
+  </div>
+     <div class="section">
+      <div class="section__title">Projects</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">DSP</div>
+           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+         </div>
+         
+         <div class="section__list-item">
+                    <div class="name">DSP</div>
+           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+           </div>
+         </div>
+       </div>
+    </div>
+     <div class="section">
+       <div class="section__title">Skills</div>
+       <div class="skills">
+         <div class="skills__item">
+           <div class="left"><div class="name">
+             Javascript
+             </div></div>
+           <div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div>
+         </div>
+         
+       </div>
+       <div class="skills__item">
+           <div class="left"><div class="name">
+             CSS</div></div>
+           <div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div>
+         </div>
+         
+       </div>
+     <div class="section">
+     <div class="section__title">
+       Interests
+       </div>
+       <div class="section__list">
+         <div class="section__list-item">
+                  Football, programming.
+          </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+
+
+
+    <!-- <div class="input-container2">
+      <div class="input-wrapper">
+        <label> </label><br>
+      <input type="text" placeholder="e.g. Internships, certifications,ect">
+      </div>
+      <button class="dlbtnclass" onclick="alert('hello world !!')">🗑️</button>
+    </div> -->
+
+    
+    
+    
+    
   </body>
+  <script src="./page2.js" type="text/javascript"></script>
 </html>
