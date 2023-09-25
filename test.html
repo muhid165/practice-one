@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced PDF Reader Web App</title>
+    <style>
+        #pdfContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #pdfViewer {
+            flex-grow: 1;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+</head>
+<body>
+    <h1>Advanced PDF Reader Web App</h1>
+    <input type="file" id="pdfInput" accept=".pdf">
+    <div id="pdfContainer">
+        <div id="pdfViewer">
+            <!-- PDF content will be displayed here -->
+        </div>
+        <div id="controls">
+            <button id="prevPage">Previous Page</button>
+            <button id="nextPage">Next Page</button>
+            <input type="number" id="pageNum" value="1">
+            <span>/</span>
+            <span id="totalPages">1</span>
+            <button id="zoomOut">Zoom Out</button>
+            <button id="zoomIn">Zoom In</button>
+        </div>
+    </div>
+
+    <script>
+        const pdfInput = document.getElementById('pdfInput');
+        const pdfContainer = document.getElementById('pdfContainer');
+        const pdfViewer = document.getElementById('pdfViewer');
+        const prevPageButton = document.getElementById('prevPage');
+        const nextPageButton = document.getElementById('nextPage');
+        const pageNumInput = document.getElementById('pageNum');
+        const totalPagesSpan = document.getElementById('totalPages');
+        const zoomOutButton = document.getElementById('zoomOut');
+        const zoomInButton = document.getElementById('zoomIn');
+
+        let pdfDoc = null;
+        let pageNum = 1;
+        let scale = 1.0;
+
+        pdfInput.addEventListener('change', function () {
+            const file = pdfInput.files[0];
+            if (file) {
+                const fileReader = new FileReader();
+
+                fileReader.onload = function () {
+                    const typedArray = new Uint8Array(this.result);
+                    displayPDF(typedArray);
+                };
+
+                fileReader.readAsArrayBuffer(file);
+            }
+        });
+
+        function displayPDF(pdfData) {
+            pdfjsLib.getDocument({ data: pdfData }).promise.then(function (pdf) {
+                pdfDoc = pdf;
+                totalPagesSpan.textContent = pdf.numPages;
+                renderPage(pageNum);
+            });
+        }
+
+        function renderPage(pageNumber) {
+            pdfDoc.getPage(pageNumber).then(function (page) {
+                const viewport = page.getViewport({ scale: scale });
+
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                }).promise.then(function () {
+                    pdfViewer.innerHTML = ''; // Clear previous content
+                    pdfViewer.appendChild(canvas);
+                });
+            });
+        }
+
+        prevPageButton.addEventListener('click', function () {
+            if (pageNum <= 1) return;
+            pageNum--;
+            renderPage(pageNum);
+            pageNumInput.value = pageNum;
+        });
+
+        nextPageButton.addEventListener('click', function () {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            renderPage(pageNum);
+            pageNumInput.value = pageNum;
+        });
+
+        pageNumInput.addEventListener('change', function () {
+            const newPageNum = parseInt(pageNumInput.value);
+            if (newPageNum >= 1 && newPageNum <= pdfDoc.numPages) {
+                pageNum = newPageNum;
+                renderPage(pageNum);
+            }
+        });
+
+        zoomOutButton.addEventListener('click', function () {
+            if (scale > 0.25) {
+                scale -= 0.25;
+                renderPage(pageNum);
+            }
+        });
+
+        zoomInButton.addEventListener('click', function () {
+            if (scale < 4.0) {
+                scale += 0.25;
+                renderPage(pageNum);
+            }
+        });
+    </script>
+</body>
+</html>

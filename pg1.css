@@ -66,6 +66,7 @@ a:hover {
   border-radius: 20px;
   cursor: pointer;
   transition-duration: 0.6s;
+  text-decoration: none;
 }
 
 #fBttn:hover {
@@ -96,8 +97,19 @@ a:hover {
 }
 
 .column2 {
-  height: 1000px;
+  height: 700px;
+  position: fixed; 
+  right: 20px; 
+  top: 0px; 
+  z-index: 99; 
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
+.column2::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 .row:after {
   content: "";
   display: table;
@@ -245,7 +257,8 @@ a:hover {
   }
   
   .email ,
-  .phone {
+  .phone,
+  .addr {
     color: #999;
     font-weight: 300;
   } 
@@ -323,9 +336,7 @@ a:hover {
     color: #000;
   }
   
-  .skills {
-    
-  }
+  
     
   .skills__item {
     margin-bottom: 10px;  
