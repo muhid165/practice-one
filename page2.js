@@ -85,6 +85,21 @@ const cntry2Input = document.querySelector("#cntry2_input");
 const cntry2output = document.querySelector("#cntry2_output");
 
 
+const sdateInput = document.querySelector("#strtd_input1");
+const sdateoutput = document.querySelector("#strtd_output1");
+
+const edateInput = document.querySelector("#endd_input1");
+const edateoutput = document.querySelector("#endd_output1");
+//new 
+const edadteInput = document.querySelector("#endd_input1");
+const edadteoutput = document.querySelector("#endd_output1");
+
+
+const edateIsnput = document.querySelector("#endd_input1");
+const edateouwtput = document.querySelector("#endd_output1");
+
+
+
 city2Input.addEventListener("input", (event) => {
   city2output.textContent = event.target.value;
 });
@@ -92,18 +107,14 @@ city2Input.addEventListener("input", (event) => {
 cntry2Input.addEventListener("input", (event) => {
   cntry2output.textContent = event.target.value;
 });
-
-
-
+ 
 empInput.addEventListener("input", (event) => {
   empoutput.textContent = event.target.value;
 });
 
-
 jbttlInput1.addEventListener("input", (event) => {
   jbttloutput1.textContent = event.target.value;
 });
-
 
 skll1Input.addEventListener("input", (event) => {
   skill1output.textContent = event.target.value;
@@ -112,8 +123,6 @@ skll1Input.addEventListener("input", (event) => {
 sklLvlInput1.addEventListener("input", (event) => {
   sklLvloutput1.textContent = event.target.value;
 });
-
-
 
 firstNameInput.addEventListener("input", (event) => {
   firstNameOutput.textContent = event.target.value;
@@ -181,6 +190,14 @@ grdInput.addEventListener("input",(event) => {
   grdOutput.textContent = event.target.value;
 });
 
+sdateInput.addEventListener("input", (event) => {
+  sdateoutput.textContent = event.target.value;
+});
+
+edateInput.addEventListener("input", (event) => {
+  edateoutput.textContent = event.target.value;
+});
+
 
 // sclwbstInput.addEventListener("input", (event) => {
 //   sclwbstoutput.textContent = event.target.value;
@@ -190,13 +207,6 @@ grdInput.addEventListener("input",(event) => {
 // sclLinkInput.addEventListener("input", (event) => {
 //   sclLinkoutput.textContent = event.target.value;
 // });
-
-
-
-
-
-
-
 
 // id="sclLink_input"   id="sclwbst_input" 
 
