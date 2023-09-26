@@ -71,6 +71,38 @@ const skill1output = document.querySelector("#skl_output1");
 const sklLvlInput1 = document.querySelector("#sklLvl_input1");
 const sklLvloutput1 = document.querySelector("#sklLvl_output1");
 
+const jbttlInput1 = document.querySelector("#jbttl_input1");
+const jbttloutput1 = document.querySelector("#jbttl_output1");
+
+
+const empInput = document.querySelector("#emp_input");
+const empoutput = document.querySelector("#emp_output");
+
+const city2Input = document.querySelector("#city2_input");
+const city2output = document.querySelector("#city2_output");
+
+const cntry2Input = document.querySelector("#cntry2_input");
+const cntry2output = document.querySelector("#cntry2_output");
+
+
+city2Input.addEventListener("input", (event) => {
+  city2output.textContent = event.target.value;
+});
+
+cntry2Input.addEventListener("input", (event) => {
+  cntry2output.textContent = event.target.value;
+});
+
+
+
+empInput.addEventListener("input", (event) => {
+  empoutput.textContent = event.target.value;
+});
+
+
+jbttlInput1.addEventListener("input", (event) => {
+  jbttloutput1.textContent = event.target.value;
+});
 
 
 skll1Input.addEventListener("input", (event) => {

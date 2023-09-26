@@ -139,11 +139,11 @@
               <div class="input-container3">
                 <div class="input-wrapper">
                   <label for="frstnm">Skill</label><br />
-                  <input type="text" class="input" id="skl_input1" placeholder="e.g.Project Management,Online Marketing, Backend Developer" />
+                  <input type="text" class="input" id="skl_input2" placeholder="e.g.Project Management,Online Marketing, Backend Developer" />
                 </div>
                 <div class="input-wrapper">
                   <label for="lsttnm">Level</label><br />
-                  <select name="skills" id="sklLvl_input1" style="width: 200px; height: 27px; border: 1px black solid; border-radius: 5px;">
+                  <select name="skills" id="sklLvl_input2" style="width: 200px; height: 27px; border: 1px black solid; border-radius: 5px;">
                     <option value="⚫⚪⚪⚪⚪-Novice">⚫⚪⚪⚪⚪-Novice</option>
                     <option value="⚫⚫⚪⚪⚪-Beginner">⚫⚫⚪⚪⚪-Beginner</option>
                     <option value="⚫⚫⚫⚪⚪-Skillfull">⚫⚫⚫⚪⚪-Skillfull</option>
@@ -170,31 +170,31 @@
               <div class="input-container">
                 <div class="input-wrapper">
                   <label for="frstnm">Job Title</label><br />
-                  <input type="text" class="input" id="firstname_input" placeholder="e.g.Retail Sales Associate" />
+                  <input type="text" class="input" id="jbttl_input1" placeholder="e.g.Retail Sales Associate" />
                 </div>
                 <div class="input-wrapper">
                   <label for="lsttnm">Employer</label><br />
-                  <input type="text" class="input" id="lastname_input" placeholder="e.g.H&M"/>
+                  <input type="text" class="input" id="emp_input" placeholder="e.g.H&M"/>
                 </div>
               </div>
               <div class="input-container">
                 <div class="input-wrapper">
                   <label for="jbttl">City</label><br />
-                  <input type="text" class="input" />
+                  <input type="text" class="input" id="city2_input" />
                 </div>
                 <div class="input-wrapper">
                   <label for="phn">Country</label><br />
-                  <input type="text" class="input" />
+                  <input type="text" class="input" id="cntry2_input"/>
                 </div>
               </div>
               <div class="input-container">
                 <div class="input-wrapper">
                   <label for="cty">Start Date</label><br />
-                  <input type="date" class="input" />
+                  <input type="date" class="input" id="strtd_input1" />
                 </div>
                 <div class="input-wrapper">
                   <label for="pstlcd"> End Date</label><br />
-                  <input type="date" class="input" />
+                  <input type="date" class="input"  id="endd_input1"/>
                 </div>
               </div>
               <div>
@@ -297,13 +297,16 @@
       <div class="section__list">
         <div class="section__list-item">
           <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
+            <div class="name" id="emp_output">KlowdBox</div>
+            <div class="addr" id="city2_output">San Fr</div>
+            <div><span id="cntry2_output">CA</span></div>
+            
+            <div class="duration" id="strtd_output1">Jan 2011 </div>
+            <div class="duration" id="strtd_output1">- Feb 2015</div>
           </div>
           <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
+            <div class="name" id="jbttl_output1">Fr developer</div>
+            <!-- <div class="desc">did This and that</div> -->
           </div>
         </div>
                 <div class="section__list-item">
@@ -314,7 +317,7 @@
           </div>
           <div class="right">
             <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
+            <!-- <div class="desc">did This and that</div> -->
           </div>
         </div>
 
