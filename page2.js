@@ -71,6 +71,15 @@ const skill1output = document.querySelector("#skl_output1");
 const sklLvlInput1 = document.querySelector("#sklLvl_input1");
 const sklLvloutput1 = document.querySelector("#sklLvl_output1");
 
+const skll2Input = document.querySelector("#skl_input2");
+const skill2output = document.querySelector("#skl_output2");
+
+const sklLvlInput2 = document.querySelector("#sklLvl_input2");
+const sklLvloutput2 = document.querySelector("#sklLvl_output2");
+
+const prSmmryInput = document.querySelector("#textArea_input");
+const prSmmryoutput = document.querySelector("#textArea_output");
+
 const jbttlInput1 = document.querySelector("#jbttl_input1");
 const jbttloutput1 = document.querySelector("#jbttl_output1");
 
@@ -123,6 +132,18 @@ skll1Input.addEventListener("input", (event) => {
 sklLvlInput1.addEventListener("input", (event) => {
   sklLvloutput1.textContent = event.target.value;
 });
+
+skll2Input.addEventListener("input",(event) => {
+  skill2output.textContent = event.target.value;
+});
+
+sklLvlInput2.addEventListener("input",(event => {
+  sklLvloutput2.textContent = event.target.value;
+}));
+
+prSmmryInput.addEventListener("input",(event => {
+  prSmmryoutput.textContent = event.target.value;
+}));
 
 firstNameInput.addEventListener("input", (event) => {
   firstNameOutput.textContent = event.target.value;
@@ -277,7 +298,13 @@ const deleteskill = (event) => {
   event.target.parentNode.remove();
 };
 
-
+function printPageArea(areaID) {
+  var printContent = document.getElementById(areaID).innerHTML;
+  var originalContent = document.body.innerHTML;
+  document.body.innerHTML = printContent;
+  window.print();
+  document.body.innerHTML =originalContent;
+}
 
 
 
