@@ -1,112 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+             /* background-color: hsl(0, 0%, 100%); */
+            font-family: "Quicksand", sans-serif;
 }
 
-.container {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-}
+      .bodyy {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-.form {
-    display: flex;
-    flex-direction: column;
-}
+      .container {
+        width: 320px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: center;
+        height: 250px;
+      }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
 
-.input-container {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-}
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
-label {
-    margin-bottom: 5px;
-}
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+      }
 
-.password-container {
-    position: relative;
-    width: 300px;
-}
+      label {
+        margin-bottom: 5px;
+      }
 
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+      .password-container {
+        position: relative;
+        width: 320px;
+      }
 
-.password-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
+      .password-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
 
-button:hover {
-    background-color: #0056b3;
-}
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
 
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .heading {
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: sans-serif;
+        font-weight: bolder;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
+  </head>
+  <body>
+    <p class="heading">BuildYourResume.com</p>
+    <br />
+    <div class="bodyy" >
+      <div class="container">
         <form class="form">
-            <h2>Login</h2>
-            <div class="input-container">
-                <input type="text" id="username" name="username" required placeholder="Username">
-            </div>
-            <div class="input-container password-container">
-                <input type="password" id="password" name="password" placeholder="Password" required width="300px" >
-                <span class="password-toggle" id="password-toggle"><img src= "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash-300x240.png" width="20px" height="18px"></span>
+          <h2>Login</h2>
+          <div class="input-container">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Username"
+            />
+          </div>
+          <div class="input-container password-container">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+              width="300px"
+            />
+            <span class="password-toggle" id="password-toggle"
+              ><img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash-300x240.png"
+                width="20px"
+                height="18px"
+            /></span>
 
-                <!-- <div class="password-container">
-                    <input type="password" id="password" name="password" placeholder="Password" required width="300px" >
-                    <span class="password-toggle" id="password-toggle"><img src= "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash-300x240.png" width="20px" height="18px"></span>
-                </div> -->
-            </div>
-            <button type="submit">Login</button>
+          </div>
+          <button type="submit">Login</button>
         </form>
+      </div>
     </div>
     <script>
-        const passwordInput = document.getElementById('password');
-const passwordToggle = document.getElementById('password-toggle');
+      const passwordInput = document.getElementById("password");
+      const passwordToggle = document.getElementById("password-toggle");
 
-passwordToggle.addEventListener('click', () => {
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-    } else {
-        passwordInput.type = 'password';
-    }
-});
-
+      passwordToggle.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
